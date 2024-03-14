@@ -1,0 +1,14 @@
+<aura:component implements='forceCommunity:availableForAllPageTypes'>
+  <aura:attribute name="name" type="String" default="" access="global" />
+  <aura:attribute name="debug" type="Boolean" default="false" access="global" />
+  <aura:attribute name="searchHub" type="String" default="" access="global" />
+    <aura:attribute name="endpointHandler" type="Aura.Component[]" access="global">
+        <c:coveo2Endpoint></c:coveo2Endpoint>
+    </aura:attribute>
+
+    <CoveoV2:CommunitySearch  name="{!v.name}"
+                            debug="{!v.debug}"
+                            searchHub="{!v.searchHub}"
+                            endpointHandler="{!v.endpointHandler}">
+  </CoveoV2:CommunitySearch>
+</aura:component>

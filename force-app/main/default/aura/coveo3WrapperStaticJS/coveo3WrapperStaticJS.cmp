@@ -1,0 +1,12 @@
+<aura:component implements='forceCommunity:availableForAllPageTypes'>
+  <aura:attribute name="name" type="String" default="" access="global" />
+  <aura:attribute name="debug" type="Boolean" default="false" access="global" />
+  <aura:attribute name="searchHub" type="String" default="" access="global" />
+
+
+    <CoveoV2:CommunitySearch  name="{!v.name}"
+                            debug="{!v.debug}"
+                            customScripts="{!$Resource.customJS}"
+                            searchHub="{!v.searchHub}"/>
+
+</aura:component>
